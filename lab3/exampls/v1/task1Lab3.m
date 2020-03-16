@@ -1,17 +1,16 @@
-disp('+++++++++A task +++++++++++');
-a = sym('2*x -1 / x^2 + 2');
-disp('detivetive function for ');
-disp(a); disp( ' is ');
-disp(diff(a));
+function task1Lab3(a, b)
+	disp('+++++++++A task +++++++++++');
+	disp('detivetive function for ');
+	disp(a); disp( ' is ');
+	disp(diff(a));
 
-disp('+++++++++B task+++++++++++');
-b = sym('atan(x^2 + 1)');
-disp('detivetive function for ');
-disp(b); disp( ' is ');
-disp(diff(b));
-disp(' and simplifyed');
-disp(expand(diff(b)));
-
+	disp('+++++++++B task+++++++++++');
+	disp('detivetive function for ');
+	disp(b); disp( ' is ');
+	disp(diff(b));
+	disp(' and simplifyed');
+	disp(expand(diff(b)));
+end
 % Result
 % +++++++++A task +++++++++++
 % detivetive function for 
