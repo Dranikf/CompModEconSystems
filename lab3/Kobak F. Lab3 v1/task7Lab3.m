@@ -1,0 +1,28 @@
+
+disp('a result is');
+limit(sym('1 + cos(x) / x + pi') , 'x' , pi , 'left')
+
+disp( 'b result is' )
+limit(sym('(sqrt(x + a) - sqrt(x - a)) / x') , 'x' , 0)
+
+disp('v result is')
+limit(sym('1/(x - 1)') , 'x' , 1 , 'left')
+
+%result 
+% a result is
+%  
+% ans =
+%  
+% pi - 1/pi + 1
+%  
+% b result is
+%  
+% ans =
+%  
+% limit(((a + x)^(1/2) - (x - a)^(1/2))/x, x = 0)
+%  
+% v result is
+%  
+% ans =
+%  
+% -Inf

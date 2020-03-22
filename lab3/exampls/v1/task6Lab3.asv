@@ -1,0 +1,9 @@
+
+disp('task a result is ');
+quadl(@(x) exp(x.*log(x+1))' , 0 , 4)
+
+disp('task b result is ')
+quadl(@(x) x.*cos(2.*x) , 0 , 2*pi)
+
+disp('task v result is ')
+qadl(@(x) exp(-x) .* x , )
