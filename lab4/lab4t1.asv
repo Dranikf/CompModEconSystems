@@ -1,0 +1,23 @@
+disp('Patr a)')
+M = rand(4);
+[V , D] = eig(M)
+
+disp('A*U');
+M*V
+disp('U*R')
+V*D
+
+disp('Part b)')
+C = magic(4);
+
+if(det(C) ~= 0)
+    
+    A  = ones(4)*rand();
+    B = inv(C) * A * C;
+    
+    disp(")
+   
+else
+    disp('ooops determinant is 0')
+end
+    
