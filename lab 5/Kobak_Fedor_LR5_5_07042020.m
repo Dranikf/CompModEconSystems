@@ -1,0 +1,32 @@
+% filePath - path to the txt data file
+
+function Kobak_Fedor_LR5_5_07042020(filePath)
+
+    % reading of the file++++++++++++++++
+    file = fopen(filePath);
+    
+     fileMatrix = fscanf(file , '%f'  , [4 20]);
+     fileMatrix = fileMatrix';
+    % reading of the file++++++++++++++++
+    
+    % initialisation++++++++++++++++++
+    Hz = fileMatrix(1:4 , 1:4);
+    Hs = fileMatrix(5:9 , 1:4);
+    Hbl = fileMatrix(10:12 , 1:4);
+    Hbm = fileMatrix(13:18 , 1:4);
+    
+    % plan product1
+    K1 = fileMatrix(19 , 1:4);
+    % plan product2
+    K2 = fileMatrix(20, 1:4);
+     % initialisation++++++++++++++++++
+     
+     disp('++++first plan data+++++');
+     lab5Calculations(Hz , Hs , Hbl , Hbm , K1);
+     disp('++++first plan data+++++');
+     
+     disp('++++second plan data+++++');
+     lab5Calculations(Hz , Hs , Hbl , Hbm , K2);
+     disp('++++second plan data+++++');
+
+end

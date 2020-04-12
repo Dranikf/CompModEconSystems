@@ -1,0 +1,1059 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+	<title></title>
+	<meta name="generator" content="LibreOffice 6.0.7.3 (Linux)"/>
+	<meta name="created" content="2017-01-01T14:28:30.863048091"/>
+	<meta name="changed" content="00:00:00"/>
+	<style type="text/css">
+		@page { size: 21.59cm 27.94cm; margin: 2cm }
+		p { margin-bottom: 0.25cm; line-height: 120% }
+	</style>
+</head>
+<body lang="en-US" dir="ltr">
+<p lang="ru-RU" align="center" style="margin-bottom: 0cm; line-height: 100%">
+Отчёт по лабораторной работе №4</p>
+<p lang="ru-RU" align="center" style="margin-bottom: 0cm; line-height: 100%">
+Все описанные функции находятся в паке
+с отчётом</p>
+<p lang="ru-RU" align="center" style="margin-bottom: 0cm; line-height: 100%">
+Задание 1.</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+Реализовано файлом сценарием</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+lab4t1.m</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>Код:</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+disp('Patr a)')</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+M = rand(4);</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+[V , D] = eig(M)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+disp('A*U');</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+M*V</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+disp('U*R')</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+V*D</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+disp('Part b)')</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+C = [6 7 9 0; 8 6 4 6; 9 8 4 6; 8 6 3 9 ];</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+if(det(C) ~= 0)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    A  = [4 5 6 7 ; 0 9 5 8; 6 8 4 3; 9 7 4 6];</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    B = inv(C) * A * C;</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    disp('eig for A')</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    eig(A)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    disp('eig for B')</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    eig(B)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+else</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    disp('ooops determinant is 0')</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+end</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>Результат выполнения:</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; lab4t1()</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+Patr a)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+V =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   0.4254             0.2722             0.2372 - 0.0930i   0.2372 +
+0.0930i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   0.5235            -0.6594             0.1186 - 0.2789i   0.1186 +
+0.2789i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   0.4751             0.2700            -0.0257 + 0.5564i  -0.0257 -
+0.5564i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   0.5651             0.6467            -0.7300            -0.7300   
+      
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+D =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   2.1396                  0                  0                  0   
+      
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+        0             0.3277                  0                  0   
+      
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+        0                  0             0.4900 + 0.3262i        0   
+      
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+        0                  0                  0             0.4900 -
+0.3262i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+A*U</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   0.9101             0.0892             0.1466 + 0.0318i   0.1466 -
+0.0318i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   1.1201            -0.2161             0.1491 - 0.0980i   0.1491 +
+0.0980i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   1.0165             0.0885            -0.1941 + 0.2643i  -0.1941 -
+0.2643i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   1.2090             0.2119            -0.3577 - 0.2381i  -0.3577 +
+0.2381i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+U*R</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   0.9101             0.0892             0.1466 + 0.0318i   0.1466 -
+0.0318i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   1.1201            -0.2161             0.1491 - 0.0980i   0.1491 +
+0.0980i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   1.0165             0.0885            -0.1941 + 0.2643i  -0.1941 -
+0.2643i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   1.2090             0.2119            -0.3577 - 0.2381i  -0.3577 +
+0.2381i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+Part b)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+eig for A</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  22.8828          
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  -5.1711          
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   2.6441 + 0.8207i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   2.6441 - 0.8207i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+eig for B</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  22.8828          
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  -5.1711          
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   2.6441 + 0.8207i</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   2.6441 - 0.8207i</p>
+<p lang="ru-RU" align="center" style="margin-bottom: 0cm; line-height: 100%">
+Задание 2.</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+Пункт 1.</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+Реализовано функцией [a , b , c] =
+leontModIsProd(A). На вход подаётся матрица
+прямых затрат А  на выходе 3 логических
+переменных 
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+1) a == true =&gt; Норма матрицы A, рассчитываемая
+как максимальное значение суммы элементов
+по столбцам, меньше единицы (достаточный
+признак).</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+2) b == true =&gt; Условие Хаукинса-Саймона
+выполнено</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+3) с == true =&gt; Матрица (E - A ) обратима, причем
+все элементы матрицы (E — A) неотрицательны.</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+Так же участвуют функции getMMinors.m — ищет
+миноры, и get1Norm.m — ищет заданную норму.</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>Результат выполнения:</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; A = [0.004 0.129 0.101 0.015 0.021; 0.36 0.222 0.094 0.125
+0.19; 0.123 0.024 0.352 0.034 0.044; 0.072 0.120 0.102 0.176 0.230;
+0.212 0.09 0.17 0.189 0.115]</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+A =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.0040    0.1290    0.1010    0.0150    0.0210</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.3600    0.2220    0.0940    0.1250    0.1900</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.1230    0.0240    0.3520    0.0340    0.0440</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.0720    0.1200    0.1020    0.1760    0.2300</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.2120    0.0900    0.1700    0.1890    0.1150</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; [a , b , c] = leontModIsProd(A)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+a =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+     1</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+b =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+     1</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+c =   1</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+Пункт 2. 
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+Предполагаю, что в условии представлен
+стоимостной межотраслевой баланс.</p>
+<p align="left" style="margin-bottom: 0cm; line-height: 100%"><span lang="ru-RU">Реализовано
+функцией </span><font color="#000000"><font face="Courier New, serif"><font size="2" style="font-size: 10pt">
+leontModResults(A, in , y , DE)</font></font></font></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>Входные данные</b> A — матрица прямых
+затрат, in — имена отраслей, y — вектор
+конечного потребления, DE — вектор
+амортизационных расходов. 
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>Выходные данные </b><span style="font-weight: normal">x
+— вектор валовых выпусков отраслей</span></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+X — матрица характеризующая межотраслевые
+поставки продукции</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+Z  - вектор условно чистой продукции</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+p — вектор цен продукции.</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>Код:</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+% y - is vector of final exrice</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+% de - is a vector of depreciation expense</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+% A - direct costs matrix 
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+% in - industry names</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+%</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+% x - gross output vector</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+% X - gintersectoral supplies matrix</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+% Z - relatively clean products vector</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+% p - prices vector</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+function [x , X , Z , p] = leontModResults(A, in , y , DE)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	indCount = numel(in);</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    eye(indCount);</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    E = eye(indCount);</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	% firstly need find vector of gross output</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    B = inv(E - A);</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	x = B*y';</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    X = [];%intersectoral supplies</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	for i = 1:indCount</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+        % intersectoral supplies</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+        for j = 1:indCount</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+			</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+           	%X = [X , A(i , j) * x(j)]; first error variant</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+            X(i , j) = A(i , j) * x(j); % ok variant</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+        end</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+        disp(['gross output for industry ' , in(i) ,' ' ,
+num2str(x(i))])</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    end</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    X = reshape(X , indCount , indCount);</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+   	Z = [];</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ 	for(j = 1:indCount)	</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+		Z(j) = x(j) - sum(X(:, j))- DE(j);</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	end</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+	p = inv(eye(indCount) - A')*(DE'+Z');</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p align="left" style="margin-bottom: 0cm; line-height: 100%"><b><span lang="ru-RU">Р</span><span lang="ru-RU">езультат
+выполения: </span></b>
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>&gt;&gt; A</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>A =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.0040    0.1290    0.1010    0.0150    0.0210</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.3600    0.2220    0.0940    0.1250    0.1900</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.1230    0.0240    0.3520    0.0340    0.0440</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.0720    0.1200    0.1020    0.1760    0.2300</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.2120    0.0900    0.1700    0.1890    0.1150</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>&gt;&gt; in</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>in =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>ABCDE</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>&gt;&gt; y</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>y =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+        <b>1290        2300        4120        5550        1100</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>&gt;&gt; de</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>de =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+         <b>600         200         300         400        1000</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>&gt;&gt; [x , X] = leontModResults(A , in , y , de)</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>gross output for industry A 3679.0293</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>gross output for industry B 9267.8362</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>gross output for industry C 8485.3639</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>gross output for industry D 11450.4967</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>gross output for industry E 7142.0511</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>full costs matrix</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>B =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>1.1473    0.2251    0.2552    0.0913    0.1120</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.7483    1.5383    0.5229    0.3768    0.4719</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.2989    0.1391    1.6710    0.1308    0.1540</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.3830    0.3478    0.4538    1.3999    0.4701</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.4901    0.3114    0.5322    0.3843    1.3347</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>x =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+  <b>1.0e+004 *</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.3679</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.9268</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.8485</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>1.1450</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.7142</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>X =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+  <b>1.0e+003 *</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.0147    1.1956    0.8570    0.1718    0.1500</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>1.3245    2.0575    0.7976    1.4313    1.3570</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.4525    0.2224    2.9868    0.3893    0.3143</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.2649    1.1121    0.8655    2.0153    1.6427</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.7800    0.8341    1.4425    2.1641    0.8213</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+При определении условно чистой продукции
+исходил из материалов  
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<font size="4" style="font-size: 15pt">Смотри Ниже</font></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<img src="images_html_f091fc18b30aed77.jpg" name="Image1" align="left" width="665" height="886" border="0"/>
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+от куда следует что 
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<img src="images_html_4406e7adf1d172b7.gif" name="Object1" hspace="8" width="101" height="43"/>
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+лишь с тем предположением, что, так как
+в выданном в электронном виде на занятии
+методическом пособии в цену вкладывались
+<b>отдельно</b> амортизация и чистая
+прибыль, то нужно также отнять
+амортизационные отчисления, так формула
+примет вид.</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<img src="images_html_ac0ded514a918e4b.gif" name="Object2" hspace="8" width="126" height="43"/>
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+где 
+<img src="images_html_da384ca2fbf866e7.gif" name="Object3" hspace="8" width="19" height="20"/>
+
+- амортизационные отчисления j-ой отрасли.</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>Z =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+  <b>1.0e+003 *</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.2425    3.6462    1.2359    4.8787    1.8568</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+В матричной форме система для определения
+цен</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<img src="images_html_56f18ab4d5fa6f09.gif" name="Object4" hspace="8" width="26" height="20"/>
+*P
++R + Z = P</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+от куда 
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+R + Z = P - 
+<img src="images_html_56f18ab4d5fa6f09.gif" name="Object5" hspace="8" width="26" height="20"/>
+*P</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+R + Z = (E - 
+<img src="images_html_56f18ab4d5fa6f09.gif" name="Object6" hspace="8" width="26" height="20"/>
+)
+* P</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+P = 
+<img src="images_html_d807a837fe897c0f.gif" name="Object7" hspace="8" width="75" height="21"/>
+(R+Z)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<b>p =</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+  <b>1.0e+004 *</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.7726</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.9045</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.8709</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>1.0214</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+    <b>0.8441</b></p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="center" style="margin-bottom: 0cm; line-height: 100%; page-break-before: always">
+<b>Проверка правильности</b></p>
+<p lang="ru-RU" align="center" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+1)Ax + y = x</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; A*x+y'</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  1.0e+004 *</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.3679</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.9268</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.8485</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    1.1450</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.7142</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; x</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+x =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  1.0e+004 *</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.3679</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.9268</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.8485</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    1.1450</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.7142</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+2) 
+<img src="images_html_8e9be1fddac2149e.gif" name="Object8" hspace="8" width="92" height="43"/>
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ возьмём i = 2</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; sum(X(2, :)) + y(2)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  9.2678e+003</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; x</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+x =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  1.0e+004 *</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.3679</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.9268</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.8485</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    1.1450</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+    0.7142</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+3)<img src="images_html_11527331448037e0.gif" name="Object10" hspace="8" width="122" height="43"/>
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+возьмём  j = 1</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; sum(X(: , 1)) + de(1) + Z(1)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  3.6790e+003</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; x(1)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  3.6790e+003</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+4) 
+<img src="images_html_28133693f77fbe9e.gif" name="Object9" hspace="8" width="139" height="43"/>
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+возьмем i = 3</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; sum(A(: , 3).*p(3)) + de(3) + Z(3)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  8.6682e+003</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+&gt;&gt; p(3)</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ans =</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+<br/>
+
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+  8.7086e+003</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+ 
+</p>
+<p lang="ru-RU" align="left" style="margin-bottom: 0cm; font-weight: normal; line-height: 100%">
+погрешность?</p>
+</body>
+</html>
