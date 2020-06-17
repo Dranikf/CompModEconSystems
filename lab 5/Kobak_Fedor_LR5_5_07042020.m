@@ -5,8 +5,8 @@ function Kobak_Fedor_LR5_5_07042020(filePath)
     % reading of the file++++++++++++++++
     file = fopen(filePath);
     
-     fileMatrix = fscanf(file , '%f'  , [4 20]);
-     fileMatrix = fileMatrix';
+    fileMatrix = fscanf(file , '%f'  , [4 20]);
+    fileMatrix = fileMatrix';
     % reading of the file++++++++++++++++
     
     % initialisation++++++++++++++++++
