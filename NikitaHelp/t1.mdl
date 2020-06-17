@@ -1,12 +1,12 @@
 Model {
-  Name			  "task2Model"
+  Name			  "t1"
   Version		  7.5
   MdlSubVersion		  0
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.9"
+    ComputedModelVersion    "1.6"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -19,19 +19,15 @@ Model {
   MinMaxOverflowLogging	  "UseLocalSettings"
   MinMaxOverflowArchiveMode "Overwrite"
   MaxMDLFileLineLength	  120
-  UserBdParams		  "PhysicalModelingChecksum;PhysicalModelingParameterChecksum;PhysicalModelingProducts"
-  PhysicalModelingChecksum "2973447911"
-  PhysicalModelingParameterChecksum "1686242501"
-  PhysicalModelingProducts "SimElectronics"
-  Created		  "Thu May 21 22:22:55 2020"
+  Created		  "Wed Jun 03 06:20:23 2020"
   Creator		  "Dranik_win"
   UpdateHistory		  "UpdateHistoryNever"
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Dranik_win"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jun 01 12:17:26 2020"
-  RTWModifiedTimeStamp	  512914507
-  ModelVersionFormat	  "1.%<AutoIncrement:9>"
+  LastModifiedDate	  "Wed Jun 03 07:02:08 2020"
+  RTWModifiedTimeStamp	  513066058
+  ModelVersionFormat	  "1.%<AutoIncrement:6>"
   ConfigurationManager	  "None"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -109,14 +105,14 @@ Model {
       Version		      "1.10.0"
       Array {
 	Type			"Handle"
-	Dimension		10
+	Dimension		8
 	Simulink.SolverCC {
 	  $ObjectID		  2
 	  Version		  "1.10.0"
 	  StartTime		  "0.0"
-	  StopTime		  "100000000"
+	  StopTime		  "20"
 	  AbsTol		  "auto"
-	  FixedStep		  "1"
+	  FixedStep		  "auto"
 	  InitialStep		  "auto"
 	  MaxNumMinSteps	  "-1"
 	  MaxOrder		  5
@@ -547,78 +543,6 @@ Model {
 	    PropName		    "Components"
 	  }
 	}
-	DES.SimEventsCC {
-	  $ObjectID		  12
-	  Version		  "1.10.0"
-	  Name			  "SimEvents"
-	  SimEventsActiveTab	  "0"
-	  propIdentEvents	  "0"
-	  propIdentEventSeed	  "123456789"
-	  propUnconnectedPorts	  "0"
-	  propMaxDesBlkSimulEvents "1000"
-	  propMaxDesMdlSimulEvents "100000"
-	  propDiagAttribOutput	  "1"
-	  propDiagFcnCallOutput	  "1"
-	  propDiagStatOutput	  "0"
-	  propDiagChangeAttrib	  "2"
-	  propRNGIdenticalSeeds	  "1"
-	}
-	SSC.SimscapeCC {
-	  $ObjectID		  13
-	  Version		  "1.0"
-	  Array {
-	    Type		    "Cell"
-	    Dimension		    1
-	    Cell		    "Name"
-	    PropName		    "DisabledProps"
-	  }
-	  Array {
-	    Type		    "Handle"
-	    Dimension		    1
-	    MECH.SimMechanicsCC {
-	      $ObjectID		      14
-	      Version		      "1.10.0"
-	      Name		      "SimMechanics"
-	      WarnOnRedundantConstraints on
-	      WarnOnSingularInitialAssembly off
-	      ShowCutJoints	      off
-	      VisOnUpdateDiagram      off
-	      VisDuringSimulation     off
-	      EnableVisSimulationTime on
-	      VisSampleTime	      "0"
-	      DisableBodyVisControl   off
-	      ShowCG		      on
-	      ShowCS		      on
-	      ShowOnlyPortCS	      off
-	      HighlightModel	      on
-	      FramesToBeSkipped	      "0"
-	      AnimationDelay	      "3"
-	      RecordAVI		      off
-	      CompressAVI	      on
-	      AutoFitVis	      "off"
-	      EnableSelection	      on
-	      LastVizWinPosition      "[-1 -1 -1 -1]"
-	      CamPosition	      "[0 0 0]"
-	      CamTarget		      "[0 0 -1]"
-	      CamUpVector	      "[0 1 0]"
-	      CamHeight		      "-1"
-	      CamViewAngle	      "0"
-	      VisBackgroundColor      "[0.9 0.9 0.95]"
-	      DefaultBodyColor	      "[1 0 0]"
-	      MDLBodyVisualizationType "Convex hull from body CS locations"
-	      OVRRIDBodyVisualizationType "NONE"
-	    }
-	    PropName		    "Components"
-	  }
-	  Name			  "Simscape"
-	  EditingMode		  "Full"
-	  ExplicitSolverDiagnosticOptions "warning"
-	  InputDerivativeDiagnosticOptions "warning"
-	  SimscapeLogType	  "none"
-	  SimscapeLogName	  "simlog"
-	  SimscapeLogLimitData	  on
-	  SimscapeLogDataHistory  5000
-	}
 	PropName		"Components"
       }
       Name		      "Configuration"
@@ -664,18 +588,6 @@ Model {
   }
   BlockParameterDefaults {
     Block {
-      BlockType		      BusCreator
-      Inputs		      "4"
-      DisplayOption	      "none"
-      UseBusObject	      off
-      BusObject		      "BusObject"
-      NonVirtualBus	      off
-    }
-    Block {
-      BlockType		      Clock
-      DisplayTime	      off
-    }
-    Block {
       BlockType		      Constant
       Value		      "1"
       VectorParams1D	      on
@@ -720,63 +632,36 @@ Model {
       RTWStateStorageClass    "Auto"
     }
     Block {
-      BlockType		      Display
-      Format		      "short"
-      Decimation	      "10"
-      Floating		      off
+      BlockType		      DotProduct
       SampleTime	      "-1"
-    }
-    Block {
-      BlockType		      Fcn
-      Expr		      "sin(u[1])"
-      SampleTime	      "-1"
-    }
-    Block {
-      BlockType		      Ground
-    }
-    Block {
-      BlockType		      Inport
-      Port		      "1"
-      UseBusObject	      off
-      BusObject		      "BusObject"
-      BusOutputAsStruct	      off
-      PortDimensions	      "-1"
-      VarSizeSig	      "Inherit"
-      SampleTime	      "-1"
+      InputSameDT	      on
       OutMin		      "[]"
       OutMax		      "[]"
-      DataType		      "auto"
+      OutputDataTypeScalingMode	"Same as first input"
       OutDataType	      "fixdt(1,16,0)"
       OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: auto"
+      OutDataTypeStr	      "Inherit: Same as first input"
       LockScale		      off
-      SignalType	      "auto"
-      SamplingMode	      "auto"
-      LatchByDelayingOutsideSignal off
-      LatchInputForFeedbackSignals off
-      Interpolate	      on
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Outport
-      Port		      "1"
-      UseBusObject	      off
-      BusObject		      "BusObject"
-      BusOutputAsStruct	      off
-      PortDimensions	      "-1"
-      VarSizeSig	      "Inherit"
-      SampleTime	      "-1"
+      BlockType		      Product
+      Inputs		      "2"
+      Multiplication	      "Element-wise(.*)"
+      CollapseMode	      "All dimensions"
+      CollapseDim	      "1"
+      InputSameDT	      on
       OutMin		      "[]"
       OutMax		      "[]"
-      DataType		      "auto"
+      OutDataTypeMode	      "Same as first input"
       OutDataType	      "fixdt(1,16,0)"
       OutScaling	      "[]"
-      OutDataTypeStr	      "Inherit: auto"
+      OutDataTypeStr	      "Inherit: Same as first input"
       LockScale		      off
-      SignalType	      "auto"
-      SamplingMode	      "auto"
-      SourceOfInitialOutputValue "Dialog"
-      OutputWhenDisabled      "held"
-      InitialOutput	      "[]"
+      RndMeth		      "Zero"
+      SaturateOnIntegerOverflow	on
+      SampleTime	      "-1"
     }
     Block {
       BlockType		      RelationalOperator
@@ -804,25 +689,6 @@ Model {
       Decimation	      "1"
       SampleInput	      off
       SampleTime	      "-1"
-    }
-    Block {
-      BlockType		      SubSystem
-      ShowPortLabels	      "FromPortIcon"
-      Permissions	      "ReadWrite"
-      PermitHierarchicalResolution "All"
-      TreatAsAtomicUnit	      off
-      CheckFcnCallInpInsideContextMsg off
-      SystemSampleTime	      "-1"
-      RTWFcnNameOpts	      "Auto"
-      RTWFileNameOpts	      "Auto"
-      RTWMemSecFuncInitTerm   "Inherit from model"
-      RTWMemSecFuncExecute    "Inherit from model"
-      RTWMemSecDataConstants  "Inherit from model"
-      RTWMemSecDataInternal   "Inherit from model"
-      RTWMemSecDataParameters "Inherit from model"
-      SimViewingDevice	      off
-      DataTypeOverride	      "UseLocalSettings"
-      MinMaxOverflowLogging   "UseLocalSettings"
     }
     Block {
       BlockType		      Sum
@@ -863,8 +729,8 @@ Model {
     }
   }
   System {
-    Name		    "task2Model"
-    Location		    [3, 603, 940, 1001]
+    Name		    "t1"
+    Location		    [3, 603, 957, 1018]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -878,57 +744,181 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "100"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    91
+    SIDHighWatermark	    19
     Block {
-      BlockType		      BusCreator
-      Name		      "Bus\nCreator"
-      SID		      64
+      BlockType		      Sum
+      Name		      "Add"
+      SID		      6
       Ports		      [2, 1]
-      Position		      [975, 291, 980, 329]
-      ShowName		      off
-      Inputs		      "2"
-      DisplayOption	      "bar"
+      Position		      [435, 62, 465, 93]
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Clock
-      Name		      "Clock"
-      SID		      63
-      Position		      [875, 345, 895, 365]
-      Decimation	      "10"
+      BlockType		      Sum
+      Name		      "Add1"
+      SID		      10
+      Ports		      [2, 1]
+      Position		      [435, 192, 465, 223]
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Fcn
-      Name		      "Fcn"
-      SID		      65
-      Position		      [1005, 295, 1065, 325]
-      Expr		      "u(1)/u(2)"
+      BlockType		      Sum
+      Name		      "Add2"
+      SID		      13
+      Ports		      [2, 1]
+      Position		      [575, 47, 605, 78]
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Fcn
-      Name		      "Fcn1"
-      SID		      70
-      Position		      [290, 385, 350, 415]
-      Expr		      "unifrnd(3 , 11)"
+      BlockType		      Sum
+      Name		      "Add3"
+      SID		      16
+      Ports		      [2, 1]
+      Position		      [580, 222, 610, 253]
+      Inputs		      "+-"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Fcn
-      Name		      "Fcn2"
-      SID		      71
-      Position		      [290, 150, 350, 180]
-      Expr		      "unifrnd(6 , 14)"
+      BlockType		      Sum
+      Name		      "Add4"
+      SID		      18
+      Ports		      [2, 1]
+      Position		      [140, 292, 170, 323]
+      BlockMirror	      on
+      NamePlacement	      "alternate"
+      Inputs		      "-+"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Ground
-      Name		      "Ground"
-      SID		      72
-      Position		      [125, 270, 145, 290]
+      BlockType		      Constant
+      Name		      "DO"
+      SID		      2
+      Position		      [300, 20, 330, 50]
+      Value		      "23"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Divide"
+      SID		      14
+      Ports		      [2, 1]
+      Position		      [665, 72, 695, 103]
+      Inputs		      "*/"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      Product
+      Name		      "Divide1"
+      SID		      17
+      Ports		      [2, 1]
+      Position		      [665, 182, 695, 213]
+      Inputs		      "*/"
+      InputSameDT	      off
+      OutDataTypeMode	      "Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+      RndMeth		      "Floor"
+      SaturateOnIntegerOverflow	off
+    }
+    Block {
+      BlockType		      RelationalOperator
+      Name		      "Dmd vs SPl"
+      SID		      11
+      Ports		      [2, 1]
+      Position		      [545, 127, 575, 158]
+      Operator		      ">"
+      InputSameDT	      off
+      LogicOutDataTypeMode    "boolean"
+      LogicDataType	      "fixdt(0, 8)"
+      OutDataTypeStr	      "boolean"
+    }
+    Block {
+      BlockType		      DotProduct
+      Name		      "Dot Product"
+      SID		      5
+      Position		      [335, 92, 365, 123]
+      OutputDataTypeScalingMode	"Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+    }
+    Block {
+      BlockType		      DotProduct
+      Name		      "Dot Product1"
+      SID		      7
+      Position		      [335, 182, 365, 213]
+      OutputDataTypeScalingMode	"Inherit via internal rule"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^-10"
+      OutDataTypeStr	      "Inherit: Inherit via internal rule"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Kd"
+      SID		      4
+      Position		      [245, 85, 275, 115]
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Ks"
+      SID		      8
+      Position		      [245, 215, 275, 245]
+      Value		      "0.3"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "SO"
+      SID		      9
+      Position		      [290, 275, 320, 305]
+      Value		      "5"
+      OutDataType	      "fixdt(1, 16)"
+      OutScaling	      "2^0"
     }
     Block {
       BlockType		      Scope
       Name		      "Scope"
-      SID		      88
+      SID		      19
       Ports		      [1]
-      Position		      [695, 339, 725, 371]
+      Position		      [155, 104, 185, 136]
       Floating		      off
       Location		      [1, 49, 1921, 1039]
       Open		      off
@@ -937,727 +927,213 @@ Model {
 	ListType		AxesTitles
 	axes1			"%<SignalLabel>"
       }
-      SaveName		      "ScopeData1"
       DataFormat	      "StructureWithTime"
       SampleTime	      "0"
     }
     Block {
-      BlockType		      Scope
-      Name		      "Scope1"
-      SID		      89
-      Ports		      [1]
-      Position		      [1030, 349, 1060, 381]
-      Floating		      off
-      Location		      [962, 57, 1920, 518]
-      Open		      on
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
-      }
-      YMin		      "0"
-      YMax		      "100000"
-      SaveName		      "ScopeData2"
-      DataFormat	      "StructureWithTime"
-      SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum"
-      SID		      58
-      Ports		      [2, 1]
-      Position		      [630, 270, 650, 290]
-      ShowName		      off
-      IconShape		      "round"
-      Inputs		      "|+-"
+      BlockType		      Switch
+      Name		      "Switch"
+      SID		      12
+      Position		      [735, 130, 765, 160]
+      Criteria		      "u2 ~= 0"
       InputSameDT	      off
-      OutDataTypeMode	      "Inherit via internal rule"
       OutDataType	      "fixdt(1, 16)"
       OutScaling	      "2^0"
-      OutDataTypeStr	      "Inherit: Inherit via internal rule"
       SaturateOnIntegerOverflow	off
     }
     Block {
-      BlockType		      Display
-      Name		      "avar\neque"
-      SID		      66
-      Ports		      [1]
-      Position		      [1105, 295, 1195, 325]
-      Decimation	      "1"
-      Lockdown		      off
-    }
-    Block {
-      BlockType		      Display
-      Name		      "avar\neque1"
-      SID		      87
-      Ports		      [1]
-      Position		      [705, 190, 795, 220]
-      Decimation	      "1"
-      Lockdown		      off
-    }
-    Block {
-      BlockType		      Display
-      Name		      "avar\neque2"
-      SID		      90
-      Ports		      [1]
-      Position		      [970, 205, 1060, 235]
-      Decimation	      "1"
-      Lockdown		      off
-    }
-    Block {
-      BlockType		      Display
-      Name		      "avar\neque3"
-      SID		      91
-      Ports		      [1]
-      Position		      [940, 395, 1030, 425]
-      Decimation	      "1"
-      Lockdown		      off
-    }
-    Block {
       BlockType		      DiscreteIntegrator
-      Name		      "can be \nserviced clients"
-      SID		      51
+      Name		      "price \naccumulation"
+      SID		      1
       Ports		      [1, 1]
-      Position		      [635, 449, 670, 481]
+      Position		      [50, 114, 85, 146]
       IntegratorMethod	      "Integration: Forward Euler"
       ExternalReset	      "none"
       InitialConditionSource  "internal"
+      InitialCondition	      "10"
       OutDataType	      "fixdt(1, 16)"
       OutScaling	      "2^0"
       ICPrevOutput	      "DiscIntNeverNeededParam"
       ICPrevScaledInput	      "DiscIntNeverNeededParam"
     }
-    Block {
-      BlockType		      Display
-      Name		      "can be serviced\nclients value"
-      SID		      54
-      Ports		      [1]
-      Position		      [850, 530, 940, 560]
-      Decimation	      "1"
-      Lockdown		      off
-    }
-    Block {
-      BlockType		      DiscreteIntegrator
-      Name		      "clients\naccumulation"
-      SID		      31
-      Ports		      [1, 1]
-      Position		      [635, 74, 670, 106]
-      IntegratorMethod	      "Integration: Forward Euler"
-      ExternalReset	      "none"
-      InitialConditionSource  "internal"
-      OutDataType	      "fixdt(1, 16)"
-      OutScaling	      "2^0"
-      ICPrevOutput	      "DiscIntNeverNeededParam"
-      ICPrevScaledInput	      "DiscIntNeverNeededParam"
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "current\neque in time"
-      SID		      61
-      Ports		      [1]
-      Position		      [870, 179, 900, 211]
-      Floating		      off
-      Location		      [237, 233, 1437, 754]
-      Open		      off
-      NumInputPorts	      "1"
-      List {
-	ListType		AxesTitles
-	axes1			"%<SignalLabel>"
+    Line {
+      SrcBlock		      "Kd"
+      SrcPort		      1
+      Points		      [35, 0]
+      Branch {
+	DstBlock		"Dot Product"
+	DstPort			1
       }
-      DataFormat	      "StructureWithTime"
-      SampleTime	      "0"
+      Branch {
+	Points			[0, -5; 300, 0]
+	Branch {
+	  DstBlock		  "Divide"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, 110]
+	  DstBlock		  "Divide1"
+	  DstPort		  2
+	}
+      }
     }
-    Block {
-      BlockType		      DiscreteIntegrator
-      Name		      "eque \naccumalation"
-      SID		      59
-      Ports		      [1, 1]
-      Position		      [740, 264, 775, 296]
-      IntegratorMethod	      "Integration: Forward Euler"
-      ExternalReset	      "none"
-      InitialConditionSource  "internal"
-      OutDataType	      "fixdt(1, 16)"
-      OutScaling	      "2^0"
-      LimitOutput	      on
-      LowerSaturationLimit    "0"
-      ICPrevOutput	      "DiscIntNeverNeededParam"
-      ICPrevScaledInput	      "DiscIntNeverNeededParam"
-    }
-    Block {
-      BlockType		      DiscreteIntegrator
-      Name		      "eques values\nwhole time"
-      SID		      62
-      Ports		      [1, 1]
-      Position		      [875, 264, 910, 296]
-      IntegratorMethod	      "Integration: Forward Euler"
-      ExternalReset	      "none"
-      InitialConditionSource  "internal"
-      OutDataType	      "fixdt(1, 16)"
-      OutScaling	      "2^0"
-      ICPrevOutput	      "DiscIntNeverNeededParam"
-      ICPrevScaledInput	      "DiscIntNeverNeededParam"
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "intervals contoller"
-      SID		      36
-      Ports		      [1, 1]
-      Position		      [450, 130, 490, 190]
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
-      RequestExecContextInheritance off
-      MaskHideContents	      off
-      System {
-	Name			"intervals contoller"
-	Location		[519, 167, 1117, 597]
-	Open			off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	Block {
-	  BlockType		  Inport
-	  Name			  "In1"
-	  SID			  38
-	  Position		  [15, 188, 45, 202]
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Clock
-	  Name			  "Clock"
-	  SID			  25
-	  Position		  [320, 175, 340, 195]
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  Decimation		  "10"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant"
-	  SID			  26
-	  Position		  [45, 55, 75, 85]
-	  Value			  "0"
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant1"
-	  SID			  29
-	  Position		  [160, 25, 190, 55]
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant2"
-	  SID			  30
-	  Position		  [160, 90, 190, 120]
-	  Value			  "0"
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "Is it\nnew \ninterval?"
-	  SID			  24
-	  Position		  [80, 170, 110, 200]
-	  Criteria		  "u2 ~= 0"
-	  InputSameDT		  off
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  DiscreteIntegrator
-	  Name			  "intervals\naccumulaiton"
-	  SID			  18
-	  Ports			  [1, 1]
-	  Position		  [195, 169, 230, 201]
-	  IntegratorMethod	  "Integration: Forward Euler"
-	  ExternalReset		  "none"
-	  InitialConditionSource  "internal"
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	  ICPrevOutput		  "DiscIntNeverNeededParam"
-	  ICPrevScaledInput	  "DiscIntNeverNeededParam"
-	}
-	Block {
-	  BlockType		  RelationalOperator
-	  Name			  "is clock > intervals"
-	  SID			  19
-	  Ports			  [2, 1]
-	  Position		  [287, 245, 318, 275]
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  InputSameDT		  off
-	  LogicOutDataTypeMode	  "boolean"
-	  LogicDataType		  "fixdt(0, 8)"
-	  OutDataTypeStr	  "boolean"
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "is it \nneeded \nnew client"
-	  SID			  28
-	  Position		  [260, 60, 290, 90]
-	  Criteria		  "u2 ~= 0"
-	  InputSameDT		  off
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out1"
-	  SID			  37
-	  Position		  [315, 68, 345, 82]
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  SrcBlock		  "Constant1"
-	  SrcPort		  1
-	  Points		  [30, 0; 0, 25]
-	  DstBlock		  "is it \nneeded \nnew client"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Constant2"
-	  SrcPort		  1
-	  Points		  [30, 0; 0, -20]
-	  DstBlock		  "is it \nneeded \nnew client"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Constant"
-	  SrcPort		  1
-	  Points		  [0, 60; -25, 0; 0, 45]
-	  DstBlock		  "Is it\nnew \ninterval?"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Is it\nnew \ninterval?"
-	  SrcPort		  1
-	  Points		  [0, -35]
+    Line {
+      SrcBlock		      "price \naccumulation"
+      SrcPort		      1
+      Points		      [0, 20; 45, 0]
+      Branch {
+	Points			[60, 0]
+	Branch {
+	  Points		  [120, 0]
 	  Branch {
-	    Points		    [0, 35]
-	    DstBlock		    "intervals\naccumulaiton"
-	    DstPort		    1
-	  }
-	  Branch {
-	    Points		    [0, -75]
-	    DstBlock		    "is it \nneeded \nnew client"
+	    Points		    [0, -35]
+	    DstBlock		    "Dot Product"
 	    DstPort		    2
 	  }
-	}
-	Line {
-	  SrcBlock		  "is clock > intervals"
-	  SrcPort		  1
-	  Points		  [0, 25; -255, 0; 0, -120]
-	  DstBlock		  "Is it\nnew \ninterval?"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Clock"
-	  SrcPort		  1
-	  Points		  [-20, 0]
-	  DstBlock		  "is clock > intervals"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "intervals\naccumulaiton"
-	  SrcPort		  1
-	  Points		  [60, 0]
-	  DstBlock		  "is clock > intervals"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "is it \nneeded \nnew client"
-	  SrcPort		  1
-	  DstBlock		  "Out1"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "In1"
-	  SrcPort		  1
-	  DstBlock		  "Is it\nnew \ninterval?"
-	  DstPort		  3
-	}
-      }
-    }
-    Block {
-      BlockType		      SubSystem
-      Name		      "intervals contoller1"
-      SID		      40
-      Ports		      [1, 1]
-      Position		      [450, 380, 490, 440]
-      MinAlgLoopOccurrences   off
-      PropExecContextOutsideSubsystem off
-      RTWSystemCode	      "Auto"
-      FunctionWithSeparateData off
-      Opaque		      off
-      RequestExecContextInheritance off
-      MaskHideContents	      off
-      System {
-	Name			"intervals contoller1"
-	Location		[519, 167, 1117, 597]
-	Open			off
-	ModelBrowserVisibility	off
-	ModelBrowserWidth	200
-	ScreenColor		"white"
-	PaperOrientation	"landscape"
-	PaperPositionMode	"auto"
-	PaperType		"A4"
-	PaperUnits		"centimeters"
-	TiledPaperMargins	[1.270000, 1.270000, 1.270000, 1.270000]
-	TiledPageScale		1
-	ShowPageBoundaries	off
-	ZoomFactor		"100"
-	Block {
-	  BlockType		  Inport
-	  Name			  "In1"
-	  SID			  41
-	  Position		  [15, 188, 45, 202]
-	  IconDisplay		  "Port number"
-	}
-	Block {
-	  BlockType		  Clock
-	  Name			  "Clock"
-	  SID			  42
-	  Position		  [320, 175, 340, 195]
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  Decimation		  "10"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant"
-	  SID			  43
-	  Position		  [45, 55, 75, 85]
-	  Value			  "0"
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant1"
-	  SID			  44
-	  Position		  [160, 25, 190, 55]
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	}
-	Block {
-	  BlockType		  Constant
-	  Name			  "Constant2"
-	  SID			  45
-	  Position		  [160, 90, 190, 120]
-	  Value			  "0"
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "Is it\nnew \ninterval?"
-	  SID			  46
-	  Position		  [80, 170, 110, 200]
-	  Criteria		  "u2 ~= 0"
-	  InputSameDT		  off
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  DiscreteIntegrator
-	  Name			  "intervals\naccumulaiton"
-	  SID			  47
-	  Ports			  [1, 1]
-	  Position		  [195, 169, 230, 201]
-	  IntegratorMethod	  "Integration: Forward Euler"
-	  ExternalReset		  "none"
-	  InitialConditionSource  "internal"
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	  ICPrevOutput		  "DiscIntNeverNeededParam"
-	  ICPrevScaledInput	  "DiscIntNeverNeededParam"
-	}
-	Block {
-	  BlockType		  RelationalOperator
-	  Name			  "is clock > intervals"
-	  SID			  48
-	  Ports			  [2, 1]
-	  Position		  [287, 245, 318, 275]
-	  BlockRotation		  270
-	  BlockMirror		  on
-	  NamePlacement		  "alternate"
-	  InputSameDT		  off
-	  LogicOutDataTypeMode	  "boolean"
-	  LogicDataType		  "fixdt(0, 8)"
-	  OutDataTypeStr	  "boolean"
-	}
-	Block {
-	  BlockType		  Switch
-	  Name			  "is it \nneeded \nnew client"
-	  SID			  49
-	  Position		  [260, 60, 290, 90]
-	  Criteria		  "u2 ~= 0"
-	  InputSameDT		  off
-	  OutDataType		  "fixdt(1, 16)"
-	  OutScaling		  "2^0"
-	  SaturateOnIntegerOverflow off
-	}
-	Block {
-	  BlockType		  Outport
-	  Name			  "Out1"
-	  SID			  50
-	  Position		  [315, 68, 345, 82]
-	  IconDisplay		  "Port number"
-	}
-	Line {
-	  SrcBlock		  "Constant1"
-	  SrcPort		  1
-	  Points		  [30, 0; 0, 25]
-	  DstBlock		  "is it \nneeded \nnew client"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Constant2"
-	  SrcPort		  1
-	  Points		  [30, 0; 0, -20]
-	  DstBlock		  "is it \nneeded \nnew client"
-	  DstPort		  3
-	}
-	Line {
-	  SrcBlock		  "Constant"
-	  SrcPort		  1
-	  Points		  [0, 60; -25, 0; 0, 45]
-	  DstBlock		  "Is it\nnew \ninterval?"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "Is it\nnew \ninterval?"
-	  SrcPort		  1
-	  Points		  [0, -35]
 	  Branch {
-	    Points		    [0, 35]
-	    DstBlock		    "intervals\naccumulaiton"
+	    Points		    [5, 0]
+	    DstBlock		    "Dot Product1"
 	    DstPort		    1
 	  }
-	  Branch {
-	    Points		    [0, -75]
-	    DstBlock		    "is it \nneeded \nnew client"
-	    DstPort		    2
-	  }
 	}
-	Line {
-	  SrcBlock		  "is clock > intervals"
-	  SrcPort		  1
-	  Points		  [0, 25; -255, 0; 0, -120]
-	  DstBlock		  "Is it\nnew \ninterval?"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "Clock"
-	  SrcPort		  1
-	  Points		  [-20, 0]
-	  DstBlock		  "is clock > intervals"
-	  DstPort		  2
-	}
-	Line {
-	  SrcBlock		  "intervals\naccumulaiton"
-	  SrcPort		  1
-	  Points		  [60, 0]
-	  DstBlock		  "is clock > intervals"
+	Branch {
+	  Points		  [0, 150]
+	  DstBlock		  "Add4"
 	  DstPort		  1
 	}
-	Line {
-	  SrcBlock		  "is it \nneeded \nnew client"
-	  SrcPort		  1
-	  DstBlock		  "Out1"
-	  DstPort		  1
-	}
-	Line {
-	  SrcBlock		  "In1"
-	  SrcPort		  1
-	  DstBlock		  "Is it\nnew \ninterval?"
-	  DstPort		  3
-	}
-      }
-    }
-    Block {
-      BlockType		      Display
-      Name		      "whole clients value"
-      SID		      55
-      Ports		      [1]
-      Position		      [850, 25, 940, 55]
-      Decimation	      "1"
-      Lockdown		      off
-    }
-    Line {
-      SrcBlock		      "intervals contoller"
-      SrcPort		      1
-      Points		      [55, 0]
-      Branch {
-	Points			[70, 0]
-	DstBlock		"clients\naccumulation"
-	DstPort			1
       }
       Branch {
-	Points			[0, 120]
-	DstBlock		"Sum"
-	DstPort			1
-      }
-    }
-    Line {
-      SrcBlock		      "clients\naccumulation"
-      SrcPort		      1
-      Points		      [80, 0; 0, -50]
-      DstBlock		      "whole clients value"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "intervals contoller1"
-      SrcPort		      1
-      Points		      [75, 0]
-      Branch {
-	Points			[50, 0]
-	DstBlock		"can be \nserviced clients"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, -105]
-	DstBlock		"Sum"
-	DstPort			2
-      }
-    }
-    Line {
-      SrcBlock		      "can be \nserviced clients"
-      SrcPort		      1
-      Points		      [70, 0; 0, 80]
-      DstBlock		      "can be serviced\nclients value"
-      DstPort		      1
-    }
-    Line {
-      SrcBlock		      "Sum"
-      SrcPort		      1
-      Points		      [25, 0]
-      Branch {
-	DstBlock		"eque \naccumalation"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, -75]
-	DstBlock		"avar\neque1"
-	DstPort			1
-      }
-      Branch {
+	Points			[0, -30]
 	DstBlock		"Scope"
 	DstPort			1
       }
     }
     Line {
-      SrcBlock		      "eque \naccumalation"
+      SrcBlock		      "DO"
       SrcPort		      1
-      Points		      [25, 0]
+      Points		      [40, 0]
       Branch {
-	Points			[0, -60; 50, 0]
-	DstBlock		"current\neque in time"
+	Points			[0, 35]
+	DstBlock		"Add"
 	DstPort			1
       }
       Branch {
-	DstBlock		"eques values\nwhole time"
-	DstPort			1
+	Points			[155, 0]
+	Branch {
+	  Points		  [30, 0]
+	  DstBlock		  "Add2"
+	  DstPort		  1
+	}
+	Branch {
+	  Points		  [0, 195]
+	  DstBlock		  "Add3"
+	  DstPort		  1
+	}
       }
     }
     Line {
-      SrcBlock		      "eques values\nwhole time"
+      SrcBlock		      "Dot Product"
       SrcPort		      1
-      Points		      [20, 0]
-      Branch {
-	Points			[0, 20]
-	DstBlock		"Bus\nCreator"
-	DstPort			1
-      }
-      Branch {
-	Points			[20, 0]
-	DstBlock		"avar\neque2"
-	DstPort			1
-      }
+      Points		      [25, 0; 0, -25]
+      DstBlock		      "Add"
+      DstPort		      2
     }
     Line {
-      SrcBlock		      "Clock"
+      SrcBlock		      "Ks"
       SrcPort		      1
-      Points		      [30, 0]
+      Points		      [20, 0; 0, -25]
+      DstBlock		      "Dot Product1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Dot Product1"
+      SrcPort		      1
+      DstBlock		      "Add1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "SO"
+      SrcPort		      1
+      Points		      [95, 0]
+      DstBlock		      "Add1"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Add1"
+      SrcPort		      1
+      Points		      [30, 0; 0, -60; 10, 0]
       Branch {
-	Points			[0, -35]
-	DstBlock		"Bus\nCreator"
+	Points			[10, 0]
+	Branch {
+	  DstBlock		  "Dmd vs SPl"
+	  DstPort		  2
+	}
+	Branch {
+	  Points		  [0, -80]
+	  DstBlock		  "Add2"
+	  DstPort		  2
+	}
+      }
+      Branch {
+	Points			[0, 95]
+	DstBlock		"Add3"
 	DstPort			2
       }
-      Branch {
-	Points			[0, 55]
-	DstBlock		"avar\neque3"
-	DstPort			1
-      }
     }
     Line {
-      SrcBlock		      "Bus\nCreator"
+      SrcBlock		      "Add"
       SrcPort		      1
-      Points		      [0, 0]
-      Branch {
-	DstBlock		"Fcn"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, 55]
-	DstBlock		"Scope1"
-	DstPort			1
-      }
-    }
-    Line {
-      SrcBlock		      "Fcn"
-      SrcPort		      1
-      DstBlock		      "avar\neque"
+      Points		      [30, 0; 0, 55]
+      DstBlock		      "Dmd vs SPl"
       DstPort		      1
     }
     Line {
-      SrcBlock		      "Fcn1"
+      SrcBlock		      "Dmd vs SPl"
       SrcPort		      1
-      Points		      [0, 10]
-      DstBlock		      "intervals contoller1"
+      DstBlock		      "Switch"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Add2"
+      SrcPort		      1
+      Points		      [20, 0; 0, 15]
+      DstBlock		      "Divide"
       DstPort		      1
     }
     Line {
-      SrcBlock		      "Fcn2"
+      SrcBlock		      "Divide"
       SrcPort		      1
-      Points		      [40, 0; 0, -5]
-      DstBlock		      "intervals contoller"
+      Points		      [10, 0; 0, 45]
+      DstBlock		      "Switch"
       DstPort		      1
     }
     Line {
-      SrcBlock		      "Ground"
+      SrcBlock		      "Add3"
       SrcPort		      1
-      Points		      [60, 0]
-      Branch {
-	Points			[0, -115]
-	DstBlock		"Fcn2"
-	DstPort			1
-      }
-      Branch {
-	Points			[0, 120]
-	DstBlock		"Fcn1"
-	DstPort			1
-      }
+      Points		      [30, 0; 0, -50]
+      DstBlock		      "Divide1"
+      DstPort		      1
+    }
+    Line {
+      SrcBlock		      "Divide1"
+      SrcPort		      1
+      Points		      [10, 0; 0, -45]
+      DstBlock		      "Switch"
+      DstPort		      3
+    }
+    Line {
+      SrcBlock		      "Switch"
+      SrcPort		      1
+      Points		      [0, 180; -585, 0]
+      DstBlock		      "Add4"
+      DstPort		      2
+    }
+    Line {
+      SrcBlock		      "Add4"
+      SrcPort		      1
+      Points		      [-110, 0; 0, -180]
+      DstBlock		      "price \naccumulation"
+      DstPort		      1
     }
   }
 }
