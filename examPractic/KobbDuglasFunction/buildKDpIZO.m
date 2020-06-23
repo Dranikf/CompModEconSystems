@@ -14,7 +14,7 @@ function buildKDpIZO(alpha , product , matgRateSub)
 	Lmax = 10; Kmax = 10;
 	%global varuables +++++++++++++++++++++++++++++++++
 
-	hande = figure('OuterPosition' , [1677 -3 1374 771]);
+	hande = figure('OuterPosition' , [-2 -3 1373 745]);
 
 	syms K L;
 
